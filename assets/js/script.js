@@ -1,4 +1,17 @@
+var inputEl = document.querySelector('input');
+var inputBtn = document.querySelector('#inputBtn');
 var apiKey = `24ff6fe5a68abc939b1c55597141819c`;
+var zipCode;
+
+function inputZipCode () {
+    if(!inputEl.value) {
+        return;
+    }
+    var zipCode = inputEl.value;
+    localStorage.setItem (zipCode, inputEl.value);
+    console.log(zipCode);
+    inputEl.value = '';
+}
 
 // now playing (original_title, overview, poster_path, vote_average, vote_count)
 fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=24ff6fe5a68abc939b1c55597141819c&language=en-US&page=1`)
@@ -22,9 +35,9 @@ fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=24ff6fe5a68abc939b
             posterURL = posterURL + posterPath;
             movieURL = movieURL + '/' + movieID;
             console.log(movieURL);
-            // var posterLink = document.createElement('a');
+            // var posterLink;
             // posterLink.setAttribute ('href', movieURL);
-            // document.getElementbyID('movieposter').appendchild(posterLink);
+            // document.getElementbyID('movielink').appendchild(movieURL);
             var posterEl = document.createElement('img');
             posterEl.setAttribute ('src', posterURL);
             posterEl.setAttribute ('width', '25%');
@@ -52,4 +65,4 @@ fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=24ff6fe5a68abc939b
 //     .then((response) => response.json())
 //     .then((data) => console.log(data));
 
-// searchBtn.addEventListener('click', handleSearchSubmit);
+inputBtn.addEventListener('click', inputZipCode);
