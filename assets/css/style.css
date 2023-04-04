@@ -15,8 +15,9 @@ html,body {
   }
 
    #movieposter img {
-    border: 15px solid rgb(90, 41, 90);
+    border: 15px solid ;
     border-radius: 10px;
+    color:  rgb(141, 74, 141);
   } 
 
    #movieposter img:hover {
@@ -31,10 +32,11 @@ html,body {
   footer {
     text-align: center;
     padding: 30px;
+    background-color: rgb(90, 41, 90);
   }
 
   footer p {
     font-size: 15px;
+    color: floralwhite;
   }
   
-
