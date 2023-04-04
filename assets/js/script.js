@@ -1,7 +1,7 @@
 var inputEl = document.querySelector('input');
 var inputBtn = document.querySelector('#inputBtn');
 var apiKey = `24ff6fe5a68abc939b1c55597141819c`;
-var zipCode;
+var apiKeyShowtimes = `xbdfr3jgxxxncz3jxd7nryvn`;
 
 function inputZipCode () {
     if(!inputEl.value) {
@@ -9,8 +9,38 @@ function inputZipCode () {
     }
     var zipCode = inputEl.value;
     localStorage.setItem (zipCode, inputEl.value);
-    console.log(zipCode);
+    getTheaters (zipCode);
     inputEl.value = '';
+}
+
+function getTheaters (zipCode) {
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': 'f8581c80ccmshc607c592930e00dp1d82a7jsnaac71f7b412c',
+            'X-RapidAPI-Host': 'flixster.p.rapidapi.com'
+        }
+    };
+    
+    fetch(`https://flixster.p.rapidapi.com/theaters/list?zipCode=${zipCode}&radius=5`, options)
+        .then(response => response.json())
+        .then(response => {
+            displayTheaters(response.data.theaters);
+            console.log(response)})
+        .catch(err => console.error(err));
+}
+
+function displayTheaters (theaters) {
+    for (i = 0; i < theaters.length; i++) {
+        var theaterName = theaters[i].name;
+        console.log (theaterName);
+        var theaterNameEl = document.createElement('p');
+        // theaterNameEl.classList.add('theaterlist');
+        theaterNameEl.setAttribute('data-id', theaters[i].id);
+        console.log(theaterNameEl);
+        theaterNameEl.textContent = (theaterName);
+        document.getElementById('theaterlist').appendChild(theaterNameEl);
+    }
 }
 
 // now playing (original_title, overview, poster_path, vote_average, vote_count)
