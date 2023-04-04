@@ -1,6 +1,7 @@
 html,body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   }
+
   .hero.is-info {
      background: linear-gradient(
         rgba(0, 0, 0, 0.5),
@@ -12,12 +13,28 @@ html,body {
     background-size: cover; 
    
   }
-  .hero .nav, .hero.is-success .nav {
-    -webkit-box-shadow: none;
-    box-shadow: none;
+
+   #movieposter img {
+    border: 15px solid rgb(90, 41, 90);
+    border-radius: 10px;
+  } 
+
+   #movieposter img:hover {
+    opacity: 90%;
+    background-color: rgb(141, 74, 141);
+    /* border-radius: 10px; */
+    transition: 500ms;
+    filter: sepia(0%);
+    border: 5px solid rgb(78, 35, 78);
+  } 
+
+  footer {
+    text-align: center;
+    padding: 30px;
   }
-  .hero .subtitle {
-    padding: 3rem 0;
-    line-height: 1.5;
+
+  footer p {
+    font-size: 15px;
   }
+  
 
