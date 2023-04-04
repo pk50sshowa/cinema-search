@@ -15,8 +15,9 @@ html,body {
   }
 
    #movieposter img {
-    border: 15px solid `);
+    border: 15px solid ;
     border-radius: 10px;
+    color:  rgb(141, 74, 141);
   } 
 
    #movieposter img:hover {
