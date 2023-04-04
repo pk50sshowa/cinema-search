@@ -35,17 +35,19 @@ fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=24ff6fe5a68abc939b
             posterURL = posterURL + posterPath;
             movieURL = movieURL + '/' + movieID;
             console.log(movieURL);
-            // var posterLink;
-            // posterLink.setAttribute ('href', movieURL);
-            // document.getElementbyID('movielink').appendchild(movieURL);
+            
+            var posterLink = document.createElement('a');
+            posterLink.setAttribute ('href', movieURL);
+            posterLink.setAttribute ('target', '_blank')
             var posterEl = document.createElement('img');
             posterEl.setAttribute ('src', posterURL);
             posterEl.setAttribute ('width', '25%');
             posterEl.setAttribute ('height', '25%');
-            document.getElementById('movieposter').appendChild(posterEl);
+            posterLink.appendChild (posterEl);
+            document.getElementById('movieposter').appendChild(posterLink);
             console.log (posterURL);
-            console.log(voteAverage);
-            console.log(voteCount);
+            console.log (voteAverage);
+            console.log (voteCount);
         }
 
     });
