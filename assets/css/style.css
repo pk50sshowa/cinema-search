@@ -39,4 +39,15 @@ html,body {
     font-size: 15px;
     color: floralwhite;
   }
+
+  .logo{
+    color: aliceblue;
+  }
+
+  .title{
+    font-size: 75px !important;
+  }
+   .subtitle {
+    font-size: 30px !important;
+   }
   
