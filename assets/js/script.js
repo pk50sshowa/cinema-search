@@ -101,6 +101,8 @@ fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=24ff6fe5a68abc939b
 //     .then((response) => response.json())
 //     .then((data) => console.log(data));
 
+// Event listeners for user input
+
 inputBtn.addEventListener('click', inputZipCode);
 document.getElementById('theaterlist').addEventListener('click', function (event){
     if (event.target.matches('p')) {
