@@ -43,6 +43,10 @@ function displayTheaters (theaters) {
     }
 }
 
+// If event.paragraph target matches, use an event listener
+// event.target.dataset.id
+// fetch (pass in movie id)
+
 // now playing (original_title, overview, poster_path, vote_average, vote_count)
 fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=24ff6fe5a68abc939b1c55597141819c&language=en-US&page=1`)
     .then((response) => response.json())
@@ -97,4 +101,11 @@ fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=24ff6fe5a68abc939b
 //     .then((response) => response.json())
 //     .then((data) => console.log(data));
 
+// Event listeners for user input
+
 inputBtn.addEventListener('click', inputZipCode);
+document.getElementById('theaterlist').addEventListener('click', function (event){
+    if (event.target.matches('p')) {
+        console.log(event.target.dataset.id);
+    } 
+});
