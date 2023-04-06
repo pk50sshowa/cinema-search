@@ -8,7 +8,7 @@ The purpose of this project was to collaborate as a team to come up with an idea
 - Be interactive (i.e., accept and resond to user input)
 - Use at least two server-side APIs
 - Be responsive
-- Have a poished UI
+- Have a polished UI
 
 After discussing potential ideas, we decided on a webpage where users can see what the latest movies are in theaters and what theaters are nearby. Once on the site, users are greeted to the webpage and invited to enter their zipcode. After their zipcode is entered, a list will appear with all of the nearby movie theaters within a five mile radius. By clicking on each individual movie theater, a new tab will open to Google with more information about the specific theater the user selected. Below, users will see movie posters of current movies in theaters. By clicking on each image, a new tab will open directing the user to more information about the movie.
 
