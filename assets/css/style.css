@@ -1,7 +1,7 @@
 :root {
   --bg-purple: rgb(141, 74, 141);
   --hover-purple: rgb(78, 35, 78);
-  --purple-3: rgb(90, 41, 90);
+  --purple-footer: rgb(90, 41, 90);
 }
 
 html,body {
@@ -72,7 +72,7 @@ li a:hover {
   footer {
     text-align: center;
     padding: 30px;
-    background-color: var(--purple-3);
+    background-color: var(--purple-footer);
   }
 
   footer p {
