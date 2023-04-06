@@ -35,6 +35,11 @@ html,body {
     font-weight: lighter;
   }
 
+  #theaterlist:hover {
+    transition: 500ms;
+  }
+
+
   #movienamelist {
     font-size: 15px;
     font-family: serif, georgia;
