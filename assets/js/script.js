@@ -43,6 +43,26 @@ function displayTheaters (theaters) {
     }
 }
 
+function displayNowPlaying (now_playing) {
+    console.log(now_playing);
+    var theaterName = now_playing;
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Key': 'f8581c80ccmshc607c592930e00dp1d82a7jsnaac71f7b412c',
+            'X-RapidAPI-Host': 'flixster.p.rapidapi.com'
+        }
+    };
+    
+    fetch('https://flixster.p.rapidapi.com/theaters/detail?id=${theaterName}', options)
+        .then(response => response.json())
+        .then(response => console.log(response))
+        .catch(err => console.error(err));
+    for (i = 0; i < now_playing.length; i++) {
+
+    }
+}
+
 // If event.paragraph target matches, use an event listener
 // event.target.dataset.id
 // fetch (pass in movie id)
@@ -106,6 +126,8 @@ fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=24ff6fe5a68abc939b
 inputBtn.addEventListener('click', inputZipCode);
 document.getElementById('theaterlist').addEventListener('click', function (event){
     if (event.target.matches('p')) {
-        console.log(event.target.dataset.id);
+        var now_playing = event.target.dataset.id;
+        console.log(now_playing);
+        displayNowPlaying (now_playing);
     } 
 });
