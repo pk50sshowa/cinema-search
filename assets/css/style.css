@@ -46,7 +46,7 @@ html,body {
     font-size: 25px;
     font-family: serif, garamond;
     font-weight: lighter;
-    background-color: var(--purple-3);
+    background-color: var(--bg-purple);
     color: white;
     text-align: center;
      border-radius: 10px;
