@@ -141,7 +141,7 @@ fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=24ff6fe5a68abc939b
 
 inputBtn.addEventListener('click', inputZipCode);
 document.getElementById('theaterList').addEventListener('click', function (event){
-    // event.preventDefault();
+    // event.preventDefault(); commented for future edits
     if (event.target.matches('a')) {
         var now_playing = event.target.dataset.id;
         console.log(now_playing);
