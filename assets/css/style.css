@@ -37,6 +37,7 @@ html,body {
 
   .menu-label {
     color: white !important;
+    font-size: 20px !important;
   }
 
   #theaterList {
