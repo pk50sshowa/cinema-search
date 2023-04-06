@@ -31,7 +31,7 @@ function getTheaters (zipCode) {
 }
 
 function displayTheaters (theaters) {
-    document.getElementById('theaterlist').innerHTML = '';
+    document.querySelector('.menu-list').innerHTML = '';
     document.getElementById('movienamelist').innerHTML = '';
     for (i = 0; i < theaters.length; i++) {
         var theaterName = theaters[i].name;
@@ -41,7 +41,7 @@ function displayTheaters (theaters) {
         theaterLink.setAttribute('href', `https://www.google.com/search?q=${theaterName}`);
         theaterLink.setAttribute('target', '_blank');
         // theaterNameEl.classList.add('theaterList');
-        theaterNameEl.setAttribute('data-id', theaters[i].id);
+        theaterLink.setAttribute('data-id', theaters[i].id);
         console.log(theaterNameEl);
         theaterLink.textContent = (theaterName);
         theaterNameEl.appendChild(theaterLink);
@@ -141,7 +141,8 @@ fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=24ff6fe5a68abc939b
 
 inputBtn.addEventListener('click', inputZipCode);
 document.getElementById('theaterList').addEventListener('click', function (event){
-    if (event.target.matches('p')) {
+    // event.preventDefault();
+    if (event.target.matches('a')) {
         var now_playing = event.target.dataset.id;
         console.log(now_playing);
         displayNowPlaying (now_playing);
