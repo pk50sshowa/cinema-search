@@ -37,7 +37,9 @@ html,body {
 
   .menu-label {
     color: white !important;
-    font-size: 20px !important;
+    font-size: 17px !important;
+    margin-top: 10px;
+    text-decoration: underline;
   }
 
   #theaterList {
