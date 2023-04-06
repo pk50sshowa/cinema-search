@@ -1,3 +1,9 @@
+:root {
+  --bg-purple: rgb(141, 74, 141);
+  --hover-purple: rgb(78, 35, 78);
+  --purple-3: rgb(90, 41, 90);
+}
+
 html,body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   }
@@ -17,32 +23,39 @@ html,body {
    #movieposter img {
     border: 15px solid ;
     border-radius: 10px;
-    color:  rgb(141, 74, 141);
+    color: var(--bg-purple);
   } 
 
    #movieposter img:hover {
     opacity: 90%;
-    background-color: rgb(141, 74, 141);
+    background-color: var(--bg-purple);
     /* border-radius: 10px; */
     transition: 500ms;
     filter: sepia(0%);
-    border: 5px solid rgb(78, 35, 78);
+    border: 5px solid var(--hover-purple);
   } 
+
+  .menu-label {
+    color: white !important;
+  }
 
   #theaterList {
     font-size: 25px;
     font-family: serif, garamond;
     font-weight: lighter;
-    background-color: rgb(90, 41, 90);
+    background-color: var(--purple-3);
     color: white;
     text-align: center;
      border-radius: 10px;
      width: 40%;
     margin: 0 auto;
-     
   }
 
 
+
+li a:hover {
+  background-color: var(--hover-purple) !important;
+}
 
   #movienamelist {
     font-size: 15px;
@@ -56,7 +69,7 @@ html,body {
   footer {
     text-align: center;
     padding: 30px;
-    background-color: rgb(90, 41, 90);
+    background-color: var(--purple-3);
   }
 
   footer p {
