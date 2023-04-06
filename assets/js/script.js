@@ -31,9 +31,11 @@ function getTheaters (zipCode) {
 }
 
 function displayTheaters (theaters) {
+    document.getElementById('theaterlist').innerHTML = '';
+    document.getElementById('movienamelist').innerHTML = '';
     for (i = 0; i < theaters.length; i++) {
         var theaterName = theaters[i].name;
-        console.log (theaterName);
+        console.log (theaterName);    
         var theaterNameEl = document.createElement('p');
         // theaterNameEl.classList.add('theaterlist');
         theaterNameEl.setAttribute('data-id', theaters[i].id);
@@ -54,13 +56,22 @@ function displayNowPlaying (now_playing) {
         }
     };
     
-    fetch('https://flixster.p.rapidapi.com/theaters/detail?id=${theaterName}', options)
+    fetch(`https://flixster.p.rapidapi.com/theaters/detail?id=${theaterName}`, options)
         .then(response => response.json())
-        .then(response => console.log(response))
+        .then(response => {
+            console.log(response);
+            console.log(response.data.theaterShowtimeGroupings.movies[0].name);
+                document.getElementById('movienamelist').innerHTML = '';
+                for (i = 0; i < response.data.theaterShowtimeGroupings.movies.length; i++) {
+                    var movieName = response.data.theaterShowtimeGroupings.movies[i].name;
+                    var movieNameEl = document.createElement('p');
+                    movieNameEl.textContent = movieName;
+                    document.getElementById('movienamelist').appendChild(movieNameEl);
+                }
+        } )
         .catch(err => console.error(err));
-    for (i = 0; i < now_playing.length; i++) {
 
-    }
+    
 }
 
 // If event.paragraph target matches, use an event listener
