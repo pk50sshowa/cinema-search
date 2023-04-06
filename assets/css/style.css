@@ -33,19 +33,25 @@ html,body {
     font-size: 25px;
     font-family: serif, garamond;
     font-weight: lighter;
-    
+    background-color: rgb(90, 41, 90);
+    color: white;
+    text-align: center;
+     border-radius: 10px;
+     width: 40%;
+    margin: 0 auto;
+     
   }
 
-  #theaterlist:hover {
-    transition: 500ms;
-  }
 
 
   #movienamelist {
     font-size: 15px;
     font-family: serif, georgia;
     font-weight: lighter;
+    
   }
+
+ 
 
   footer {
     text-align: center;
@@ -70,12 +76,3 @@ html,body {
     font-size: 30px !important;
    }
   
-#theaterList {
-  background-color: rgb(90, 41, 90);
-  color: white;
-  font-size: 25px;
-  text-align: center;
-  border-radius: 10px;
-  width: 40%;
-  margin: 0 auto;  
-}
