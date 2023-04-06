@@ -29,6 +29,12 @@ html,body {
     border: 5px solid rgb(78, 35, 78);
   } 
 
+  #theaterlist {
+    font-size: 25px;
+    font-family: serif, garamond;
+    font-weight: lighter;
+  }
+
   footer {
     text-align: center;
     padding: 30px;
