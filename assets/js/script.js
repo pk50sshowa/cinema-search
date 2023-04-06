@@ -34,12 +34,16 @@ function displayTheaters (theaters) {
     for (i = 0; i < theaters.length; i++) {
         var theaterName = theaters[i].name;
         console.log (theaterName);
-        var theaterNameEl = document.createElement('p');
-        // theaterNameEl.classList.add('theaterlist');
+        var theaterNameEl = document.createElement('li');
+        var theaterLink = document.createElement('a');
+        theaterLink.setAttribute('href', `https://www.google.com/search?q=${theaterName}`);
+        theaterLink.setAttribute('target', '_blank');
+        // theaterNameEl.classList.add('theaterList');
         theaterNameEl.setAttribute('data-id', theaters[i].id);
         console.log(theaterNameEl);
-        theaterNameEl.textContent = (theaterName);
-        document.getElementById('theaterlist').appendChild(theaterNameEl);
+        theaterLink.textContent = (theaterName);
+        theaterNameEl.appendChild(theaterLink);
+        document.querySelector('.menu-list').appendChild(theaterNameEl);
     }
 }
 
@@ -72,7 +76,7 @@ fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=24ff6fe5a68abc939b
             
             var posterLink = document.createElement('a');
             posterLink.setAttribute ('href', movieURL);
-            posterLink.setAttribute ('target', '_blank')
+            posterLink.setAttribute ('target', '_blank');
             var posterEl = document.createElement('img');
             posterEl.setAttribute ('src', posterURL);
             posterEl.setAttribute ('width', '25%');
@@ -104,7 +108,7 @@ fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=24ff6fe5a68abc939b
 // Event listeners for user input
 
 inputBtn.addEventListener('click', inputZipCode);
-document.getElementById('theaterlist').addEventListener('click', function (event){
+document.getElementById('theaterList').addEventListener('click', function (event){
     if (event.target.matches('p')) {
         console.log(event.target.dataset.id);
     } 

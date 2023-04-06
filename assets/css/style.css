@@ -52,3 +52,12 @@ html,body {
     font-size: 30px !important;
    }
   
+#theaterList {
+  background-color: rgb(90, 41, 90);
+  color: white;
+  font-size: 25px;
+  text-align: center;
+  border-radius: 10px;
+  width: 40%;
+  margin: 0 auto;  
+}
