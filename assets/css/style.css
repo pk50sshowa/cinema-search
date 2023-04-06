@@ -35,6 +35,12 @@ html,body {
     font-weight: lighter;
   }
 
+  #movienamelist {
+    font-size: 15px;
+    font-family: serif, georgia;
+    font-weight: lighter;
+  }
+
   footer {
     text-align: center;
     padding: 30px;
