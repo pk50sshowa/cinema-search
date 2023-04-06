@@ -29,7 +29,7 @@ html,body {
     border: 5px solid rgb(78, 35, 78);
   } 
 
-  #theaterlist {
+  #theaterList {
     font-size: 25px;
     font-family: serif, garamond;
     font-weight: lighter;
