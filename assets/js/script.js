@@ -70,6 +70,7 @@ function displayNowPlaying (now_playing) {
                 }
         } )
         .catch(err => console.error(err));
+        // If the array is empty, add code to compensate for this
 
     
 }
