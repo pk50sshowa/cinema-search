@@ -57,12 +57,18 @@ function displayTheaters(theaters) {
 }
 
 function zipCodeHistory (zipCode) {
-    
-        
+    console.log(zipCodeArr);
+    var zipCode = zipCode;
+    console.log(zipCode);
 
+    zipCodeArr.push(zipCode);
+    var string = JSON.stringify(zipCodeArr);
+    localStorage.setItem("zipCodeArr", string);
+    console.log(zipCodeArr);
+    displayHistory(zipCodeArr);
 }
 
-function displayHistory () {
+function displayHistory (zipCodeArr) {
     localStorage.getItem('zipCode');
 }
 
