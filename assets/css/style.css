@@ -65,6 +65,18 @@ li a:hover {
     
   }
 
+  #search-history {
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  .historyBtn {
+    background-color: var(--hover-purple) !important;
+    color: white !important;
+    font-size: 15px;
+    border-radius: 10px;
+  }
+
   footer {
     text-align: center;
     padding: 30px;
