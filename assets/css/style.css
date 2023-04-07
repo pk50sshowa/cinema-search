@@ -40,6 +40,7 @@ html,body {
     font-size: 17px !important;
     margin-top: 10px;
     text-decoration: underline;
+    font-weight: bold;
   }
 
   #theaterList {
