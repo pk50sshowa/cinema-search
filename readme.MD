@@ -31,8 +31,8 @@ This webpage is live at the following URL:
 
 Any questions can be directed to the developers of this project:
 - paul.koehler@gmail.com
-- Joceliyn email
-- Kevenchito24@icloud.com
+- jocevaldez98@gmail.com
+- kevenchito24@icloud.com
 - brian.autieri@icloud.com
 
 ## Credits
