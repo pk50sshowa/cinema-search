@@ -31,7 +31,7 @@ This webpage is live at the following URL:
 
 Any questions can be directed to the developers of this project:
 - paul.koehler@gmail.com
-- Joceliyn email
+- jocevaldez98@gmail.com
 - Keven email
 - brian.autieri@icloud.com
 
