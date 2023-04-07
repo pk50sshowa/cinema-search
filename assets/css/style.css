@@ -87,8 +87,11 @@ li a:hover {
 
   .title{
     font-size: 75px !important;
+    border: .5rem solid;
+    border-color:floralwhite;
   }
   
    .subtitle {
     font-size: 30px !important;
+    
    }
