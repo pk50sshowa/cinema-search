@@ -41,6 +41,9 @@ function getTheaters(zipCode) {
 function displayTheaters(theaters) {
     document.querySelector('.menu-list').innerHTML = '';
     document.getElementById('movienamelist').innerHTML = '';
+    if (!theaters) {
+        return;
+    }
     for (i = 0; i < theaters.length; i++) {
         var theaterName = theaters[i].name;
         console.log(theaterName);
@@ -81,7 +84,6 @@ function displayHistory(zipCodeArr) {
         historyButton.setAttribute('data-zip', zipCodeArr[i]);
         document.getElementById('search-history').appendChild(historyButton);
     }
-
 }
 
 function handleHistorySubmit(e) {
