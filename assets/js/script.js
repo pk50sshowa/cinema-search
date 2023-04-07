@@ -159,3 +159,4 @@ document.getElementById('theaterList').addEventListener('click', function (event
     }
 });
 document.getElementById('search-history').addEventListener('click', handleHistorySubmit);
+displayHistory();
