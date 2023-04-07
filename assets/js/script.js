@@ -56,8 +56,40 @@ function displayTheaters(theaters) {
     }
 }
 
-function displayHistory () {
-    localStorage.getItem('zipCode');
+function zipCodeHistory(zipCode) {
+    console.log(zipCodeArr);
+    var zipCode = zipCode;
+    console.log(zipCode);
+
+    zipCodeArr.push(zipCode);
+    var string = JSON.stringify(zipCodeArr);
+    localStorage.setItem("zipCodeArr", string);
+    console.log(zipCodeArr);
+    displayHistory(zipCodeArr);
+}
+
+function displayHistory(zipCodeArr) {
+    zipCodeArr = JSON.parse(localStorage.getItem('zipCodeArr'));
+    if (!zipCodeArr) {
+        return;
+    }
+    document.getElementById('search-history').innerHTML = '';
+    for (i = 0; i < zipCodeArr.length; i++) {
+        var historyButton = document.createElement('button');
+        historyButton.textContent = zipCodeArr[i];
+        historyButton.setAttribute("class", "historyBtn");
+        historyButton.setAttribute('data-zip', zipCodeArr[i]);
+        document.getElementById('search-history').appendChild(historyButton);
+    }
+
+}
+
+function handleHistorySubmit(e) {
+    if (!e.target.matches('.historyBtn')) {
+        return;
+    }
+    var zipCode = e.target.getAttribute('data-zip');
+    getTheaters(zipCode);
 }
 
 // A fetch call to show movies that are now playing and dynamically prints their movie posters with associated links to pages about each movie (original_title, overview, poster_path, vote_average, vote_count)
@@ -115,7 +147,6 @@ fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=24ff6fe5a68abc939b
 //     .then((data) => console.log(data));
 
 // Event listeners for user input
-
 inputBtn.addEventListener('click', inputZipCode);
 document.getElementById('theaterList').addEventListener('click', function (event) {
     // event.preventDefault(); commented for future edits
@@ -125,3 +156,4 @@ document.getElementById('theaterList').addEventListener('click', function (event
         // displayNowPlaying (now_playing);
     }
 });
+document.getElementById('search-history').addEventListener('click', handleHistorySubmit);
