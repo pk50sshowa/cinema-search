@@ -1,7 +1,19 @@
+<<<<<<< HEAD
 html,
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
+=======
+:root {
+  --bg-purple: rgb(141, 74, 141);
+  --hover-purple: rgb(78, 35, 78);
+  --purple-footer: rgb(90, 41, 90);
+}
+
+html,body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  }
+>>>>>>> 0fb0dc872feb8aaf5a12e7711783cd5b280f44b1
 
 .hero.is-info {
   background: linear-gradient(rgba(0, 0, 0, 0.5),
@@ -11,6 +23,7 @@ body {
   -o-background-size: cover;
   background-size: cover;
 
+<<<<<<< HEAD
 }
 
 #movieposter img {
@@ -47,9 +60,66 @@ body {
   font-size: 15px;
   font-family: serif, georgia;
   font-weight: lighter;
+=======
+   #movieposter img {
+    border: 15px solid ;
+    border-radius: 10px;
+    color: var(--bg-purple);
+  } 
+
+   #movieposter img:hover {
+    opacity: 90%;
+    background-color: var(--bg-purple);
+    /* border-radius: 10px; */
+    transition: 500ms;
+    filter: sepia(0%);
+    border: 5px solid var(--hover-purple);
+  } 
+
+  .menu-label {
+    color: white !important;
+    font-size: 17px !important;
+    margin-top: 10px;
+    text-decoration: underline;
+    font-weight: bold;
+  }
+
+  #theaterList {
+    font-size: 25px;
+    font-family: serif, garamond;
+    font-weight: lighter;
+    background-color: var(--bg-purple);
+    color: white;
+    text-align: center;
+     border-radius: 10px;
+     width: 30%;
+    margin: 0 auto;
+  }
+
+
+
+li a:hover {
+  background-color: var(--hover-purple) !important;
+}
+
+  #movienamelist {
+    font-size: 15px;
+    font-family: serif, georgia;
+    font-weight: lighter;
+    
+  }
+>>>>>>> 0fb0dc872feb8aaf5a12e7711783cd5b280f44b1
 
 }
 
+<<<<<<< HEAD
+=======
+  footer {
+    text-align: center;
+    padding: 30px;
+    background-color: var(--purple-footer);
+  }
+>>>>>>> 0fb0dc872feb8aaf5a12e7711783cd5b280f44b1
 
 
 footer {
@@ -58,6 +128,7 @@ footer {
   background-color: rgb(90, 41, 90);
 }
 
+<<<<<<< HEAD
 footer p {
   font-size: 15px;
   color: floralwhite;
@@ -74,3 +145,12 @@ footer p {
 .subtitle {
   font-size: 30px !important;
 }
+=======
+  .title{
+    font-size: 75px !important;
+  }
+  
+   .subtitle {
+    font-size: 30px !important;
+   }
+>>>>>>> 0fb0dc872feb8aaf5a12e7711783cd5b280f44b1

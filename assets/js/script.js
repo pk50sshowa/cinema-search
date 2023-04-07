@@ -3,6 +3,7 @@ var inputEl = document.querySelector('input');
 var inputBtn = document.querySelector('#inputBtn');
 var apiKey = `24ff6fe5a68abc939b1c55597141819c`;
 var apiKeyShowtimes = `xbdfr3jgxxxncz3jxd7nryvn`;
+var zipCodeArr = [];
 
 // This function receives a ZIP code from the user, but does not accept any other type of data
 function inputZipCode() {
@@ -11,6 +12,7 @@ function inputZipCode() {
     }
     var zipCode = inputEl.value;
     localStorage.setItem(zipCode, inputEl.value);
+    zipCodeHistory(zipCode);
     getTheaters(zipCode);
     inputEl.value = '';
 }
@@ -46,7 +48,6 @@ function displayTheaters(theaters) {
         var theaterLink = document.createElement('a');
         theaterLink.setAttribute('href', `https://www.google.com/search?q=${theaterName}`);
         theaterLink.setAttribute('target', '_blank');
-        // theaterNameEl.classList.add('theaterList');
         theaterLink.setAttribute('data-id', theaters[i].id);
         console.log(theaterNameEl);
         theaterLink.textContent = (theaterName);
@@ -55,39 +56,9 @@ function displayTheaters(theaters) {
     }
 }
 
-// function displayNowPlaying (now_playing) {
-//     console.log(now_playing);
-//     var theaterName = now_playing;
-//     const options = {
-//         method: 'GET',
-//         headers: {
-//             'X-RapidAPI-Key': 'f8581c80ccmshc607c592930e00dp1d82a7jsnaac71f7b412c',
-//             'X-RapidAPI-Host': 'flixster.p.rapidapi.com'
-//         }
-//     };
-
-//     fetch(`https://flixster.p.rapidapi.com/theaters/detail?id=${theaterName}`, options)
-//         .then(response => response.json())
-//         .then(response => {
-//             console.log(response);
-//             console.log(response.data.theaterShowtimeGroupings.movies[0].name);
-//                 document.getElementById('movienamelist').innerHTML = '';
-//                 for (i = 0; i < response.data.theaterShowtimeGroupings.movies.length; i++) {
-//                     var movieName = response.data.theaterShowtimeGroupings.movies[i].name;
-//                     var movieNameEl = document.createElement('p');
-//                     movieNameEl.textContent = movieName;
-//                     document.getElementById('movienamelist').appendChild(movieNameEl);
-//                 }
-//         } )
-//         .catch(err => console.error(err));
-//         // If the array is empty, add code to compensate for this
-
-
-// }
-
-// If event.paragraph target matches, use an event listener
-// event.target.dataset.id
-// fetch (pass in movie id)
+function displayHistory () {
+    localStorage.getItem('zipCode');
+}
 
 // A fetch call to show movies that are now playing and dynamically prints their movie posters with associated links to pages about each movie (original_title, overview, poster_path, vote_average, vote_count)
 fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=24ff6fe5a68abc939b1c55597141819c&language=en-US&page=1`)
