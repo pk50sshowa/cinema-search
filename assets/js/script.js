@@ -133,21 +133,6 @@ fetch(`https://api.themoviedb.org/3/movie/now_playing?api_key=24ff6fe5a68abc939b
 
     });
 
-// // reviews
-// fetch(`https://api.themoviedb.org/3/movie/{movie_id}/reviews?api_key=24ff6fe5a68abc939b1c55597141819c&language=en-US&page=1`)
-//     .then((response) => response.json())
-//     .then((data) => console.log(data));
-
-// // images
-// fetch(`https://api.themoviedb.org/3/movie/{movie_id}/images?api_key=24ff6fe5a68abc939b1c55597141819c&language=en-US`)
-//     .then((response) => response.json())
-//     .then((data) => console.log(data));
-
-// // release dates
-// fetch(`https://api.themoviedb.org/3/movie/{movie_id}/release_dates?api_key=24ff6fe5a68abc939b1c55597141819c`)
-//     .then((response) => response.json())
-//     .then((data) => console.log(data));
-
 // Event listeners for user input
 inputBtn.addEventListener('click', inputZipCode);
 document.getElementById('theaterList').addEventListener('click', function (event) {
