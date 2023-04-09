@@ -22,7 +22,7 @@ function getTheaters(zipCode) {
     const options = {
         method: 'GET',
         headers: {
-            'X-RapidAPI-Key': 'f8581c80ccmshc607c592930e00dp1d82a7jsnaac71f7b412c',
+            'X-RapidAPI-Key': '7dcc3e349amsh7501d2c3e8000fap134f9ajsn7c0c5b65b093',
             'X-RapidAPI-Host': 'flixster.p.rapidapi.com'
         }
     };
