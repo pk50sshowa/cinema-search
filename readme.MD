@@ -10,11 +10,11 @@ The purpose of this project was to collaborate as a team to come up with an idea
 - Be responsive
 - Have a polished UI
 
-After discussing potential ideas, we decided on a webpage where users can see what the latest movies are in theaters and what theaters are nearby. Once on the site, users are greeted to the webpage and invited to enter their zipcode. After their zipcode is entered, a list will appear with all of the nearby movie theaters within a five mile radius. By clicking on each individual movie theater, a new tab will open to Google with more information about the specific theater the user selected. Below, users will see movie posters of current movies in theaters. By clicking on each image, a new tab will open directing the user to more information about the movie.
+After discussing potential ideas, we decided on a webpage where users can see what the latest movies are in theaters and what theaters are nearby. Once on the site, users are greeted to the webpage and invited to enter their ZIP code. After their zipcode is entered, a list will appear with all of the nearby movie theaters within a five mile radius. By clicking on each individual movie theater, a new tab will open to Google with more information about the specific theater the user selected. Below, users will see movie posters of current movies in theaters. By clicking on each image, a new tab will open directing the user to more information about the movie.
 
 ## Usage
 
-- Enter your zipcode to view a list of movie theaters near you
+- Enter your ZIP code to view a list of movie theaters near you
 - Select a theather to be redirected and learn more about the theater
 - Scroll down to see what movies are currently playing in the United States
 - Click on the poster image of the movie you want to learn more information about the movie you're interested in
